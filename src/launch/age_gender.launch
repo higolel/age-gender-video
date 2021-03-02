@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<launch>
+	<param name="image_path" type="string" value="$(find age_gender)/image/" />
+	<param name="weight_file" type="string" value="$(find age_gender)/models/EfficientNetB3_224_weights.11-3.44.hdf5" />
+	<!--
+	<node pkg="age_gender" type="age_gender.py" name="age_gender_node" />
+	-->
+	<node pkg="age_gender" type="age_gender.py" name="age_gender_node1" output="screen" respawn="true">
+		<param name="video" type="string" value="rtsp://admin:rsxx1111@192.168.201.73:554/" />
+		<param name="cam" type="string" value="left_front" />
+	</node>
+
+	<!--
+	<node pkg="age_gender" type="age_gender.py" name="age_gender_node2" output="screen" respawn="true">
+		<param name="video" type="string" value="rtsp://admin:rsxx1111@192.168.201.73:554/" />
+		<param name="cam" type="string" value="left_front" />
+	</node>
+
+	<node pkg="age_gender" type="age_gender.py" name="age_gender_node3" output="screen" respawn="true">
+		<param name="video" type="string" value="rtsp://admin:rsxx1111@192.168.201.73:554/" />
+		<param name="cam" type="string" value="left_front" />
+	</node>
+
+	<node pkg="age_gender" type="age_gender.py" name="age_gender_node4" output="screen" respawn="true">
+		<param name="video" type="string" value="rtsp://admin:rsxx1111@192.168.201.73:554/" />
+		<param name="cam" type="string" value="left_front" />
+	</node>
+	-->
+
+</launch>
+
+
